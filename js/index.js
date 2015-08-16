@@ -29,16 +29,16 @@ function createPictureWall(options) {
         wallpaper: options.wallpaper
     };
 
-    if (!params.images || !params.wallpaper || typeof params.image !== 'object' || params.image.length < 1) {
+    if (!params.images || !params.wallpaper || typeof params.images !== 'object' || params.images.length < 1) {
         console.error('You must passing "image tile" and "wallpaper" to "createPictureWall" function.');
 
         return;
     }
 
-    var source = $(options.id || '#wall').html(),
-        template = Handlebars.compile(source);
+    var source = '<div class="wall" style="width: {{rowSize}}; background-size: {{rowSize}} {{colSize}}; background: url({{wallpaper}}) 0px 0px;"> {{#times rows}} <div class="row" style="width: {{../rowSize}}"> {{#times ../cols}} <img class="tile" src="{{get ../../images}}" style="width: {{../../tileSize}}; height: {{../../tileSize}}" /> {{/times}} </div> {{/times}} </div>';
 
-    var tmpl = template(params);
+    var template = Handlebars.compile(source),
+        tmpl = template(params);
 
     $(options.target || '#container').append(tmpl);
 
