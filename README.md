@@ -1,9 +1,6 @@
 # profile-picture-wall
 Profile picture wall
 
-Sample:
-
-
 Usage:
 ```
 1. Import js and css
