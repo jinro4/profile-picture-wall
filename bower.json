@@ -1,0 +1,19 @@
+{
+  "name": "Profile picture wall",
+  "version": "0.0.1",
+  "authors": [
+    "jinro4 <jinro4@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "handlebars": "~3.0.3"
+  }
+}

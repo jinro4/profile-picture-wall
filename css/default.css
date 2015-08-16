@@ -1,0 +1,14 @@
+.wall {
+    text-align: center;
+}
+
+.tile {
+    opacity: 0.1;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.tile:hover {
+    opacity: 0.9;
+}
